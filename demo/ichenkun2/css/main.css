@@ -1,0 +1,67 @@
+html,body,div,p,span,em,strong,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,textarea,select,button,th,td,blockquote { margin:0;padding:0; }
+a,img,button { border:0;outline:0; }
+ul,ol { list-style:none; }
+h1,h2,h3,h4,h5,h6 { font-size:100%;font-weight:normal; }
+em,strong,address,caption,cite,code,pre { font-style:normal;font-weight:noraml; }
+header,footer,article,aside,nav,section,figure,figcaption { display:block;margin:0;padding:0; }
+.clearfix:after { content:'.';display:block;visibility:hidden;height:0;clear:both; }
+.clearfix { *zoom:1; }
+
+html,body { height:100%;overflow:hidden; }
+body.init { background:url(../images/loader.gif) no-repeat center center; } 
+#wrapper { position:relative;height:100%;font-size:12px;font-family:helvetica,arial,sans-serif; }
+#wrapper.init { visibility:hidden; }
+#header { width:900px;margin:0 auto;position:relative;top:25px;z-index:20; }
+#header .logo { width:366px;height:68px;padding-right:10px;text-indent:-9999px;background:url(../images/logo.gif) no-repeat 0 0; }
+#header .to-blog { position:absolute;top:-125px;right:100px;display:block;width:80px;height:100px;z-index:30;background:url(../images/blog.png) no-repeat 0 0; }
+#header .to-blog span { display:none;position:absolute;width:112px;height:22px;top:60px;right:10px;text-indent:-9999px;background:url(../images/to-blog.png) no-repeat 0 0; }
+#main { width:900px;height:432px;margin:0 auto;position:relative; }
+#nav { position:absolute;top:100px;left:15px;z-index:2; } 
+#nav li { margin:15px 0; }
+#nav a { display:block;width:105px;margin-left:66px;padding:6px 0;cursor:pointer;font-weight:bold;font-size:16px;color:#3f3f3f;text-indent:40px;text-decoration:none;border:1px solid #aaa;-moz-border-radius:10px 0 0 10px;-webkit-border-radius:10px 0 0 10px;border-radius:10px 0 0 10px;-moz-box-shadow:0 0 5px #ccc;-webkit-box-shadow:0 0 5px #ccc;box-shadow:0 0 5px #ccc; }
+#nav a:hover { background-color:#f1f1f1; }
+#nav .home { background:url(../images/home-nav.png) no-repeat 10px center; }
+#nav .home em { color:#cc3333; }
+#nav .about { background:url(../images/about-nav.png) no-repeat 10px center; }
+#nav .about em { color:#0099cc; }
+#nav .skills { background:url(../images/skills-nav.png) no-repeat 10px center; }
+#nav .skills em { color:#99cc33; }
+#nav .contact { background:url(../images/contact-nav.png) no-repeat 10px center; }
+#nav .contact em { color:#ff9900; }
+#nav .current { margin-left:15px;background-color:#f1f1f1;}
+#nav .current.contact { margin-left:0px; } 
+
+.adorn { width:128px;height:114px;background:url(../images/computer.gif) no-repeat 0 0;position:absolute;bottom:-45px;right:60px;z-index:20; }
+.body { position:relative;width:620px;height:380px;margin:0 auto;padding:25px 20px;background:#fff;border:1px solid #adadad;overflow:hidden; z-index:10; }
+#page-wrapper { position:absolute;width:620px;height:9999px; }
+.page { position:relative;width:620px;height:380px;padding:25px 0; }
+#home-page { background:url(../images/seal.png) no-repeat 45% 30%; }
+#home-page p { position:absolute;left:120px;bottom:80px;width:369px;height:48px;text-indent:-9999px;background:url(../images/home-intro.gif) no-repeat 0 0; }
+#about-page { background:url(../images/me.png) no-repeat 10% bottom; }
+#about-page .intro { padding:35px 40px;color:#3b3b3b;font:16px/24px  "Trebuchet MS",sans-serif; }
+#about-page .intro em { font:14px "\5b8b\4f53",helvetica,arial,sans-serif;}
+#about-page .intro p { margin-bottom:10px; }
+#about-page .intro span { color:#0099cc; }
+#profile { display:block;width:90px;height:90px;position:absolute;bottom:-100px;right:150px;text-decoration:none;background:url(../images/dialog.gif) no-repeat 0 0; }
+#profile span { display:none;width:80px;padding:10px;position:absolute;bottom:90px;color:#fff;background:#1d1d1d;z-index:40;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; }
+#skills-page { text-indent:-9999px;background:url(../images/skills-chart.png) no-repeat 10% 50%; }
+#contact-form { padding:20px 0 0 10px;background:url(../images/hire-me.gif) no-repeat 100% 0px; }
+#contact-form .field-wrapper { width:308px;margin-bottom:10px; }
+#contact-form label { display:block;margin-bottom:2px;color:#252525;font-size:16px; }
+#contact-form .tips { position:relative;top:4px; }
+#contact-form input { width:300px;padding:5px 2px;font-size:14px;color:#555;border:2px solid #ddd;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px; }
+#contact-form input:focus, #contact-form textarea:focus { border:2px solid #f7b101; }
+#contact-form textarea { width:300px;height:80px;padding:2px;border:2px solid #ddd;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px; }
+#contact-form .submit { display:block;width:149px;height:28px;background:url(../images/submit-button.gif) no-repeat 0 0;text-indent:-9999px;border:0;cursor:pointer; }
+#contact-page .email-info { height:30px;margin:30px 0 40px 20px;background:url(../images/contact-me.gif) no-repeat 180px 30%; }
+#contact-page .email-info a { display:block;width:160px;height:30px;padding:0px 0 0 20px;line-height:30px;background:url(../images/email.png) no-repeat 0 center;font-size:14px;font-weight:bold;color:#555;text-decoration:none; }
+#footer { position:absolute;bottom:-52px;width:100%;height:25px;background:#000;-moz-box-shadow:0 0 5px #848484;-webkit-box-shadow:0 0 5px #848484;box-shadow:0 0 5px #848484; }
+#footer .up-down { display:block;width:32px;height:27px;position:absolute;right:10px;top:-27px;text-indent:-9999px;cursor:pointer;background:url(../images/down.png) no-repeat 0 0; }
+#footer .up-down.up { background:url(../images/up.png) no-repeat 0 0; }
+#minor-info { width:900px;margin:0 auto; }
+#copyright { float:left;width:360px;margin-top:5px;color:#ccc; }
+#social-media { float:right;width:140px;margin-top:5px; }
+
+
+#profile-page h1 { position:absolute;bottom:10%;right:5%;width:391px;height:50px;text-indent:-9999px;background:url(../images/logo2.png) no-repeat 0 0; }
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="Description" content="all about the web and life" />
+	<meta name="Keywords" content="html,css,javascript,php,web,life" />
+	<title>ichenkun1.0</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!--[if IE 6]>
+	<style type="text/css">body{display:none;overflow:hidden;}html{background:#fff url(images/warning.png) no-repeat center center}</style>
+	<![endif]-->
+</head>
+<body>
+<div id="wrap" >
+	<div id="header">
+		<ul id="nav" class="scroller clearfix">
+			<li>
+				<a href="#home-page" class="home-anchor">Home</a>
+			</li>
+			<li>
+				<a href="#about-page" class="about-anchor">About</a>
+			</li>
+			<li>
+				<a href="#skills-page" class="skills-anchor">Skills</a>
+			</li>
+			<li>
+				<a href="#contact-page" class="contact-anchor">Contact</a>
+			</li>
+		</ul>
+		<div id="page-peel">
+			<a href="#">
+				<img src="images/page-peel.png" class="page-peel-img" alt="" />
+				<span class="page-peel-msg">Go To My Blog</span>
+			</a>
+		</div>
+	</div>
+	
+	<div id="body">
+		<div id="home-page" class="page" >
+			 <div id="site-intro">
+				<p id="site-summary">All About Web And Life</p>
+			</div>
+		</div>
+		
+		<div id="about-page" class="page">
+			<h2>about</h2>
+			<div id="intro-me">
+				<div id="json-me">
+					<span>var <em>me</em> = {</span>
+					<span class="info">Name : 'Chen Kun',</span>
+					<span class="info">Age : 25,</span>
+					<span class="info">Sex : 'Male',</span>
+					<span class="info">Zodiac : 'Libra',</span>
+					<span class="info">Hometown : 'Yue Yang',</span>
+					<span class="info">Industry : 'Internet',</span>
+					<span class="info">Profession : 'Front-end Engineer'</span>
+					<span>}</span>
+				</div>
+			</div>
+		</div>
+		
+		<div id="skills-page"  class="page">
+			<h2>skills</h2>
+			<div id="skills-chart">
+				Program Language And Development Tools.
+			</div>
+		</div>
+		
+		<div id="contact-page" class="page">
+			<h2>contact</h2>
+			<form id="contact-form" action="/sendmail.php" method="post">
+				<div>
+					<label>Name <span class="tips">*</span><label>
+					<input type="text" name="guest"  required="required" />
+				</div>
+				<div>
+					<label>Your Email <span class="tips">*</span></label>
+					<input type="email" name="email" required="required"  />
+				</div>
+				<div>
+					<label>Your Website</label>
+					<input type="url" name="website" />
+				</div>
+				<div>
+					<label>Message / Comment</label>
+					<textarea></textarea>
+				</div>
+				<button type="submit" class="submit">Submit</button>
+			</form>
+			
+			<div id="contact-email">
+				<a href="mailto:ichenkun@gmail.com">ichenkun@gmail.com</a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<div id="rel-info">
+			<div id="copyright">Copyright &copy; 2010 chenkun.me. All Rights Reserved.</div>
+			<a href="http://www.facebook.com/home.php?#!/ichenkun" title="facebook"><img src="images/facebook.png" alt="facebook" /></a>
+			<a href="http://twitter.com/ichenkun" title="twitter"><img src="images/twitter.png" alt="twitter" /></a>
+			<a href="http://www.renren.com/profile.do?id=250275878" title="人人网" ><img src="images/renren.png" alt="renren" /></a>
+			<a href="http://www.douban.com/people/3346099/" title="豆瓣"><img src="images/douban.png" alt="douban" /></a>
+			<a href="http://t.sina.com.cn/1691620223" title="新浪微博"><img src="images/sinaweibo.png" alt="sina" /></a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.page').height(document.documentElement.clientHeight);
+	
+	$('a',$('#nav')).pageScroller();
+	if ($.browser.msie) {
+		$('.home-anchor',$('#nav')).trigger('click');
+	}
+	else {
+		$("html,body").animate({scrollTop:0},0,function(){
+			$('.home-anchor',$('#nav')).addClass('active');
+		});
+	}
+	
+	$("#page-peel").pagePeel({width:250,height:250});
+	
+	$('#contact-form').submit(function(){
+		alert('Sorry ,Not finished yet. However you can use  email to contact me ');
+		return false; 
+	});
+});
+
+jQuery.fn.pagePeel = function(settings) {
+	settings = jQuery.extend({
+		speed: 200
+	}, settings);
+	return this.each(function(){
+		var $caller = $(this),
+		     $peelImg = $caller.find('.page-peel-img'),
+		     $peelMsg = $caller.find('.page-peel-msg'),
+			 oWidth = $peelMsg.width(),
+			 oHeight = $peelMsg.height();
+		
+		$caller.hover(
+			function(){
+				$peelImg.add($peelMsg)
+					.stop()
+					.animate({
+						width:settings.width,
+						height:settings.height
+					},settings.speed);
+			},
+			function(){	
+				$peelImg.add($peelMsg)
+					.stop()
+					.animate({
+						width:oWidth,
+						height:oHeight
+					},settings.speed);
+			}
+		)
+	})
+};
+
+jQuery.fn.pageScroller = function(settings) {
+ 	settings = jQuery.extend({
+		speed : 1000
+	}, settings);	
+	
+	return this.each(function(){
+		var $caller = $(this);
+		
+		$caller.click(function() {	 
+			$caller.closest('.scroller').find('a').removeClass('active');
+			$caller.addClass('active');
+			var  targetPage = $caller.attr("href"),
+			      distance = $(targetPage).offset().top;
+			$("html:not(:animated),body:not(:animated)").animate({scrollTop:distance}, settings.speed);
+		  	return false;
+		})
+	})
+};
+</script>
+</body>
+</html>

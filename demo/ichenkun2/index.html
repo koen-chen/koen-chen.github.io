@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="Description" content="All About The Web And Life" />
+<meta name="Keywords" content="HTML,CSS,JavaScript,PHP,Ruby,Web,Life" />
+<title>ichenkun2.0</title>
+<!--[if lt IE 9]><script>
+document.createElement('header');document.createElement('nav');document.createElement('section');
+document.createElement('footer');document.createElement('article');document.createElement('aside');
+</script><![endif]-->
+<link rel="stylesheet" href="css/main.css" />
+</head>
+<body class="init">
+<div id="wrapper" class="init">
+    <header id="header">
+        <h1 class="logo">ChenKun</h1>
+        <a class="to-blog" href="#" target="_blank"><span>Go to my Blog ~</span></a>
+    </header>
+    
+    <div id="main">
+        <nav id="nav">
+            <ul>
+                <li><a href="home-page" class="home current">home</a></li>
+                <li><a href="about-page" class="about">about</a></li>
+                <li><a href="skills-page" class="skills">skills</a></li>
+                <li><a href="contact-page" class="contact">contact</a></li>
+            </ul>
+        </nav>
+        
+        <div class="body">
+            <div id="page-wrapper">
+                <section id="home-page" class="page">
+                    <p>All About Web And Life</p>
+                </section>
+                
+                <section id="about-page" class="page">
+                    <div class="intro">
+                        <p>
+                            Hello! My name is ChenKun<em>（陈坤）</em>, I'm a <span>Front-end Engineer</span>,
+                            I now live in ChangSha.
+                        </p>
+                        <p>
+                            I have been learning current web development technology and skills on my own such as:
+                            <span>HTML, CSS, JavaScript, PHP, Ruby </span>...
+                        </p>
+                        <p>
+                            I am passionate about improving my skills  in <span>computer programming</span> and staying well-informed
+                            of <span>new techniques</span> in the field. 
+                        </p>
+                    </div>
+                    <a href="profile.html" target="_blank" id="profile"><span>See My Profile</span></a>
+                </section>
+                
+                <section id="skills-page" class="page">
+                    The following programming language and development tools are all my familiar and favorite:
+                    HTML(4&amp;5), CSS(2&amp;3), JavaScript(jQuery,Mootools), PHP, Ruby... 
+                </section>
+                
+                <section id="contact-page" class="page">
+                     <form action="/sendmail.php" method="post" id="contact-form">
+                        <div class="field-wrapper">
+                            <label>Name <span class="tips">*</span></label>
+                            <input type="text" name="guest"  required="required" />
+                        </div>
+                        <div class="field-wrapper">
+                            <label>Your Email <span class="tips">*</span></label>
+                            <input type="email" name="email" required="required"  />
+                        </div>
+                        <div class="field-wrapper">
+                            <label>Message / Comment</label>
+                            <textarea></textarea>
+                        </div> 
+                        <button type="submit" class="submit">Submit</button>
+                    </form>
+                    <div class="email-info">
+                        <a href="mailto:ichenkun@gmail.com">ichenkun@gmail.com</a>
+                    </div> 
+                </section> 
+            </div>
+        </div>
+        <div class="adorn"></div>
+    </div>
+    
+    <footer id="footer">
+        <div id="minor-info" class="clearfix">
+            <div id="copyright">Copyright &copy; 2011 chenkun.me. All Rights Reserved.</div>
+            <div id="social-media">
+                <a href="http://www.facebook.com/home.php?#!/ichenkun" title="facebook"><img src="images/facebook.png" alt="facebook" /></a>
+                <a href="http://twitter.com/ichenkun" title="twitter"><img src="images/twitter.png" alt="twitter" /></a>
+                <a href="http://www.renren.com/profile.do?id=250275878" title="人人网" ><img src="images/renren.png" alt="renren" /></a>
+                <a href="http://www.douban.com/people/3346099/" title="豆瓣"><img src="images/douban.png" alt="douban" /></a>
+                <a href="http://t.sina.com.cn/1691620223" title="新浪微博"><img src="images/sinaweibo.png" alt="sina" /></a>
+            </div>
+        </div>
+        <a class="up-down">Up and Down</a>
+    </footer>
+</div>
+<script src="js/jquery.js"></script> 
+<script src="js/base.js"></script> 
+</body>
+</html>

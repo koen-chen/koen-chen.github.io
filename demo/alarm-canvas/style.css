@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html { 
+	width: 100%;
+	height: 100%;
+	background: url(resources/splash.jpg) no-repeat 50% 50%;
+	background-size: 100% 100%; 
+}
+h1 {
+	font: 20px/1em 'Microsoft YaHei';
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 50px;
+	width:400px;
+	height:100px;
+	margin-left: -200px;
+}
+#panelCanvas { 
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -190px;
+	margin-top: -200px; 
+}
+#clockCanvas { 
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -190px;
+	margin-top: -200px; 
+}
+#alarmCanvas {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -200px;
+}
+#tickCanvas {
+	display: none;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -200px;
+	margin-top: -200px;
+}
